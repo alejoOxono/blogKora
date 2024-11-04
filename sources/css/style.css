@@ -1,0 +1,101 @@
+  body {
+    margin: 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 0.2fr 3.2fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "blog blog blog blog"
+      "blog blog blog blog"
+      "blog blog blog blog"
+      "blog blog blog blog";
+  }
+  
+  .blog {
+    display: grid;
+    grid-template-columns: 0.6fr 1.8fr 0.6fr;
+    grid-template-rows: 0.44fr 0.2fr 3.2fr 0.1fr;
+    gap: 0px 0px;
+    grid-area: blog;
+    background-image: url('../img/fondo2.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  
+  .banner { 
+    grid-area: 1 / 1 / 2 / 4;
+    width: 100vw;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    }
+
+  .banner::-webkit-scrollbar {
+        display: none;
+    }
+  
+  .menu { 
+    grid-area: 2 / 1 / 3 / 4;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    }
+  
+  .cuerpo { 
+    grid-area: 3 / 1 / 5 / 4;
+    }
+  
+  .contenido { 
+    grid-area: 3 / 2 / 4 / 3; 
+    background-image: url('../img/fondo.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    }
+  
+  .pie { 
+    grid-area: 4 / 1 / 5 / 4;
+    background-color: rgb(179, 61, 61);
+    }
+
+  #blog-menu:hover, #home-menu:hover { 
+    cursor: pointer;
+    font-size: 32px;
+    color: brown;
+    }
+  
+  #blog-menu, #home-menu {
+    color: black;
+    font-size: 34px;
+    width: 240px;
+   }
+
+  #contenido {
+    color: brown;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contenido-blog {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #imagen-banner {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
